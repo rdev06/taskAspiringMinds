@@ -20,7 +20,7 @@ const rl = readline.createInterface({
 });
 
 rl.question('What is student id ? ', function (id) {
-  console.time('time to fetch student id');
+  console.time('Time for query');
   fs.readFile(path, 'utf8', (err, data) => {
     if (err) {
       console.log(err);
@@ -36,6 +36,6 @@ rl.question('What is student id ? ', function (id) {
 });
 
 rl.on('close', function () {
-  console.timeEnd('time to fetch student id');
+  console.timeEnd('Time for query');
   process.exit(0);
 });
